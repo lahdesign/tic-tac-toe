@@ -19,7 +19,8 @@ $(() => {
   const userOne = 'X'
   const userTwo = 'O'
   let currentUser = userOne
-  // let square = document.getElementsByTagName('td')
+  let square = document.getElementsByTagName('td')
+  // console.log(square)
 
   // *******************
   // works but can re-click and no end
@@ -46,6 +47,9 @@ $(() => {
 
   $('.col1, .col2, .col3').click(function (square) {
     if (square.target.innerHTML === '') {
+      console.log(square.target.innerHTML)
+      console.log(square.target)
+      console.log(square)
       if (currentUser === userOne) {
         $(this).html(userTwo)
         currentUser = userTwo
@@ -55,6 +59,60 @@ $(() => {
       }
     }
   })
+
+  $('.col1, .col2, .col3').click(function (square) {
+    if (square.target.innerHTML === '') {
+      if (currentUser === userOne) {
+        $(this).html(userTwo)
+        currentUser = userTwo
+      } else if (currentUser === userTwo) {
+        $(this).html(userOne)
+        currentUser = userOne
+      }
+    }
+  })
+
+  // 0 1 2
+  // 3 4 5
+  // 6 7 8
+
+  const winner = function () {
+    if (square[0].innerHTML === square[1].innerHTML === square[2].innerHTML) {
+      console.log('you win')
+    } else if (square[3].innerHTML === square[4].innerHTML === square[5].innerHTML) {
+      console.log('you win')
+    } else if (square[6].innerHTML === square[7].innerHTML === square[8].innerHTML) {
+      console.log('you win')
+    } else if (square[0].innerHTML === square[3].innerHTML === square[6].innerHTML) {
+      console.log('you win')
+    } else if (square[1].innerHTML === square[4].innerHTML === square[7].innerHTML) {
+      console.log('you win')
+    } else if (square[2].innerHTML === square[5].innerHTML === square[8].innerHTML) {
+      console.log('you win')
+    } else if (square[0].innerHTML === square[4].innerHTML === square[8].innerHTML) {
+      console.log('you win')
+    } else if (square[6].innerHTML === square[4].innerHTML === square[2].innerHTML) {
+      console.log('you win')
+    }
+  }
+
+  // if (square[0].innerHTML === square[1].innerHTML === square[2].innerHTML) {
+  //   console.log('you win')
+  // } else if (square[3].innerHTML === square[4].innerHTML === square[5].innerHTML) {
+  //   console.log('you win')
+  // } else if (square[6].innerHTML === square[7].innerHTML === square[8].innerHTML) {
+  //   console.log('you win')
+  // } else if (square[0].innerHTML === square[3].innerHTML === square[6].innerHTML) {
+  //   console.log('you win')
+  // } else if (square[1].innerHTML === square[4].innerHTML === square[7].innerHTML) {
+  //   console.log('you win')
+  // } else if (square[2].innerHTML === square[5].innerHTML === square[8].innerHTML) {
+  //   console.log('you win')
+  // } else if (square[0].innerHTML === square[4].innerHTML === square[8].innerHTML) {
+  //   console.log('you win')
+  // } else if (square[6].innerHTML === square[4].innerHTML === square[2].innerHTML) {
+  //   console.log('you win')
+  // }
 
   // document.getElementById('s1').innerHTML = 'O'
   // let switchUser = document.getElementById('s1')
