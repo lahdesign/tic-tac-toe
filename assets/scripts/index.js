@@ -8,14 +8,40 @@
 
 $(() => {
   // your JS code goes here
-  // let board = ['', '', '', '', '', '', '', '', '']
+  // let board = [
+  //   ['', '', ''],
+  //   ['', '', ''],
+  //   ['', '', '']
+  // ]
+
+  // const userOne = 'X'
+  // const userTwo = 'O'
+
+  // let switchUser = function(user) {
+  //   user.innerHTML = user.innerHTML === "X" ? "O" : "X";
+  // }
+
+  const userOne = 'X'
+  const userTwo = 'O'
+  let currentUser = userOne
+
+  // document.getElementById('s1')
+  // switchUser.innerHTML = switchUser.innerHTML === 'X' ? 'O' : 'X'
+
+  $('.col1, .col2, .col3').click(function () {
+    if (currentUser === userOne) {
+      $(this).html(userTwo)
+      currentUser = userTwo
+    } else if (currentUser === userTwo) {
+      $(this).html(userOne)
+      currentUser = userOne
+    }
+  })
   // let squares = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9']
 
-  // let x = 'x'
-
-  document.getElementById('s1').innerHTML = 'X'
-  let btn = document.getElementById('s1');
-  btn.innerHTML = btn.innerHTML === "X" ? "O" : "X";
+  // document.getElementById('s1').innerHTML = 'O'
+  // let switchUser = document.getElementById('s1')
+  // switchUser.innerHTML = switchUser.innerHTML === 'X' ? 'O' : 'X'
 
   // let gameDisplay = function (board, squares) {
   // }
