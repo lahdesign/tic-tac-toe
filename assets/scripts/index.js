@@ -7,9 +7,9 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
-const gamePlay = require('./game.js')
+require('./game.js')
+require('./modals.js')
 
 $(() => {
   authEvents.addHandlers()
-  gamePlay.gameboard()
 })
