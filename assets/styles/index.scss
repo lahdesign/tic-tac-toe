@@ -1,16 +1,62 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+// **********************
+// SETTINGS FOR BODY
+// **********************
 body { 
     padding-top: 70px; 
     text-align: center;
+    // height: 100%;
 }
 
-table {
-    margin: auto;
-    border: 2px solid black;
+// **********************
+// SETTINGS FOR HEADING
+// **********************
+h1 {
+    padding-bottom: 100px;
 }
 
+// **********************
+// SETTINGS FOR NAVBAR
+// **********************
 nav {
     text-align: right;
+}
+
+// **********************
+// SETTINGS FOR GAMEBOARD
+// **********************
+table {
+    margin: auto;
+}
+tr {
+    height: 100px;
+}
+td {
+    width: 100px;
+}
+.row1 {
+    border-bottom: 4px solid #222;
+}
+.row2 {
+    border-bottom: 4px solid #222;
+}
+.col1 {
+    border-right: 4px solid #222;
+}
+.col2 {
+    border-right: 4px solid #222;
+}
+
+// **********************
+// SETTINGS FOR FOOTER
+// **********************
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #444;
+    color: #aaa;
 }
