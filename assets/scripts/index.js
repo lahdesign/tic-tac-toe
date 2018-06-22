@@ -14,30 +14,47 @@ $(() => {
   //   ['', '', '']
   // ]
 
-  // const userOne = 'X'
-  // const userTwo = 'O'
-
-  // let switchUser = function(user) {
-  //   user.innerHTML = user.innerHTML === "X" ? "O" : "X";
-  // }
+  // let squares = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9']
 
   const userOne = 'X'
   const userTwo = 'O'
   let currentUser = userOne
+  // let square = document.getElementsByTagName('td')
 
-  // document.getElementById('s1')
-  // switchUser.innerHTML = switchUser.innerHTML === 'X' ? 'O' : 'X'
+  // *******************
+  // works but can re-click and no end
+  // ***********************
+  // $('.col1, .col2, .col3').click(function () {
+  //   if (currentUser === userOne) {
+  //     $(this).html(userTwo)
+  //     currentUser = userTwo
+  //   } else if (currentUser === userTwo) {
+  //     $(this).html(userOne)
+  //     currentUser = userOne
+  //   }
+  // })
 
-  $('.col1, .col2, .col3').click(function () {
-    if (currentUser === userOne) {
-      $(this).html(userTwo)
-      currentUser = userTwo
-    } else if (currentUser === userTwo) {
-      $(this).html(userOne)
-      currentUser = userOne
+  // $('.col1, .col2, .col3').click(function () {
+  //   if (currentUser === userOne && square[0].innerHTML === '') {
+  //     $(this).html(userTwo)
+  //     currentUser = userTwo
+  //   } else if (currentUser === userTwo) {
+  //     $(this).html(userOne)
+  //     currentUser = userOne
+  //   }
+  // })
+
+  $('.col1, .col2, .col3').click(function (square) {
+    if (square.target.innerHTML === '') {
+      if (currentUser === userOne) {
+        $(this).html(userTwo)
+        currentUser = userTwo
+      } else if (currentUser === userTwo) {
+        $(this).html(userOne)
+        currentUser = userOne
+      }
     }
   })
-  // let squares = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9']
 
   // document.getElementById('s1').innerHTML = 'O'
   // let switchUser = document.getElementById('s1')
