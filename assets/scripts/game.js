@@ -115,6 +115,16 @@ const clearBoard = function (number) {
 document.getElementById('reset').addEventListener('click', startGame)
 
 // ************************
+// function to reset score
+// ************************
+const resetScore = function () {
+  scoreX = 0
+  scoreO = 0
+  score()
+}
+document.getElementById('resetScore').addEventListener('click', resetScore)
+
+// ************************
 // exports
 // ************************
 module.exports = {
