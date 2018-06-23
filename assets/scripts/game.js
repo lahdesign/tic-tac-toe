@@ -15,6 +15,7 @@ let executedScore = false
 
 const playerMoves = $('.col1, .col2, .col3').click(function (square) {
   if (winner === '' && square.target.innerHTML === '') {
+    displayCurrentUser(currentUser)
     // console.log(square.target.innerHTML)
     // console.log(square.target.id)
     // console.log(square.target)
@@ -81,6 +82,10 @@ const message = function (msg) {
   document.getElementById('message').innerText = msg
 }
 
+const displayCurrentUser = function (currentUser) {
+  document.getElementById('currentUser').innerText = `${currentUser}, it's your turn!`
+}
+
 // ************************
 // function to add win to score
 // ************************
@@ -111,6 +116,7 @@ const clearBoard = function (number) {
   document.getElementById('s' + number).innerText = ''
   winner = ''
   executedScore = false
+  message('')
 }
 document.getElementById('reset').addEventListener('click', startGame)
 
