@@ -38,9 +38,9 @@ let currentUser = userOne
 
 const gameboard = $('.col1, .col2, .col3').click(function (square) {
   if (square.target.innerHTML === '') {
-    console.log(square.target.innerHTML)
-    console.log(square.target)
-    console.log(square)
+    // console.log(square.target.innerHTML)
+    // console.log(square.target)
+    // console.log(square)
     if (currentUser === userOne) {
       $(this).html(userTwo)
       currentUser = userTwo
@@ -51,17 +51,29 @@ const gameboard = $('.col1, .col2, .col3').click(function (square) {
   }
 })
 
-$('.col1, .col2, .col3').click(function (square) {
-  if (square.target.innerHTML === '') {
-    if (currentUser === userOne) {
-      $(this).html(userTwo)
-      currentUser = userTwo
-    } else if (currentUser === userTwo) {
-      $(this).html(userOne)
-      currentUser = userOne
-    }
+function startGame () {
+  for (let i = 1; i <= 9; i = i + 1) {
+    clearBoard(i)
   }
-})
+}
+
+function clearBoard (number) {
+  document.getElementById('s' + number).innerText = ''
+}
+
+document.getElementById('reset').addEventListener('click', startGame)
+
+// $('.col1, .col2, .col3').click(function (square) {
+//   if (square.target.innerHTML === '') {
+//     if (currentUser === userOne) {
+//       $(this).html(userTwo)
+//       currentUser = userTwo
+//     } else if (currentUser === userTwo) {
+//       $(this).html(userOne)
+//       currentUser = userOne
+//     }
+//   }
+// })
 
 // 0 1 2
 // 3 4 5
@@ -88,5 +100,7 @@ $('.col1, .col2, .col3').click(function (square) {
 // }
 
 module.exports = {
-  gameboard
+  gameboard,
+  startGame,
+  clearBoard
 }
