@@ -17,24 +17,23 @@
 const userOne = 'X'
 const userTwo = 'O'
 let currentUser = userTwo
+let winner = ''
 
 const playerMoves = $('.col1, .col2, .col3').click(function (square) {
-  if (checkWinner !== 'no winner') {
-    if (square.target.innerHTML === '') {
-      // console.log(square.target.innerHTML)
-      // console.log(square.target.id)
-      // console.log(square.target)
-      // console.log(square)
-      if (currentUser === userOne) {
-        $(this).html(userTwo)
-        currentUser = userTwo
-      } else if (currentUser === userTwo) {
-        $(this).html(userOne)
-        currentUser = userOne
-      }
+  checkWinner()
+  if (winner === '' && square.target.innerHTML === '') {
+    // console.log(square.target.innerHTML)
+    // console.log(square.target.id)
+    // console.log(square.target)
+    // console.log(square)
+    if (currentUser === userOne) {
+      $(this).html(userTwo)
+      currentUser = userTwo
+    } else if (currentUser === userTwo) {
+      $(this).html(userOne)
+      currentUser = userOne
     }
   }
-  checkWinner()
 })
 
 // ************************
@@ -50,6 +49,8 @@ const checkWinner = function () {
     // for horizantal rows
   } if (sq(1) !== '' && sq(1) === sq(2) && sq(2) === sq(3)) {
     message(`Congratulations, ${sq(1)}! You win!`)
+    winner = sq(1)
+    // console.log(winner)
   } else if (sq(4) !== '' && sq(4) === sq(5) && sq(5) === sq(6)) {
     message(`Congratulations, ${sq(4)}! You win!`)
   } else if (sq(7) !== '' && sq(7) === sq(8) && sq(8) === sq(9)) {
