@@ -1,26 +1,19 @@
-// your JS code goes here
-// let board = [
-//   ['', '', ''],
-//   ['', '', ''],
-//   ['', '', '']
-// ]
-
-// let squares = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9']
-
-// 1 2 3
-// 4 5 6
-// 7 8 9
-
-// const square = document.getElementsByTagName('td')
-// console.log(square)
-
+// ************************
+// variables
+// ************************
 const userOne = 'X'
 const userTwo = 'O'
 let currentUser = userTwo
 let winner = ''
+let scoreO = 0
+let scoreX = 0
+let executedScore = false
+
+// ************************
+// Game play
+// ************************
 
 const playerMoves = $('.col1, .col2, .col3').click(function (square) {
-  checkWinner()
   if (winner === '' && square.target.innerHTML === '') {
     // console.log(square.target.innerHTML)
     // console.log(square.target.id)
@@ -34,6 +27,8 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
       currentUser = userOne
     }
   }
+  checkWinner()
+  score(winner)
 })
 
 // ************************
@@ -53,37 +48,52 @@ const checkWinner = function () {
     // console.log(winner)
   } else if (sq(4) !== '' && sq(4) === sq(5) && sq(5) === sq(6)) {
     message(`Congratulations, ${sq(4)}! You win!`)
+    winner = sq(4)
   } else if (sq(7) !== '' && sq(7) === sq(8) && sq(8) === sq(9)) {
-    message(`Congratulations, ${sq(1)}! You win!`)
+    message(`Congratulations, ${sq(7)}! You win!`)
+    winner = sq(7)
     // for vertical rows
   } else if (sq(1) !== '' && sq(1) === sq(4) && sq(4) === sq(7)) {
     message(`Congratulations, ${sq(1)}! You win!`)
+    winner = sq(1)
   } else if (sq(2) !== '' && sq(2) === sq(5) && sq(5) === sq(8)) {
     message(`Congratulations, ${sq(2)}! You win!`)
+    winner = sq(2)
   } else if (sq(3) !== '' && sq(3) === sq(6) && sq(6) === sq(9)) {
     message(`Congratulations, ${sq(3)}! You win!`)
+    winner = sq(3)
     // for diagonals
   } else if (sq(1) !== '' && sq(1) === sq(5) && sq(5) === sq(9)) {
     message(`Congratulations, ${sq(1)}! You win!`)
+    winner = sq(1)
   } else if (sq(7) !== '' && sq(7) === sq(5) && sq(5) === sq(3)) {
     message(`Congratulations, ${sq(7)}! You win!`)
+    winner = sq(7)
   } else {
     message(`No winner`)
   }
 }
 
+// ************************
+// functions to display text
+// ************************
 const message = function (msg) {
   document.getElementById('message').innerText = msg
 }
 
-// const end = function () {
-//   if (checkWinner !== 'no winner') {
-//     console.log('no go')
-//   }
-// }
 // ************************
 // function to add win to score
 // ************************
+const score = function (winner) {
+  if (!executedScore && winner === 'X') {
+    scoreX++
+    executedScore = true
+  } else if (!executedScore && winner === 'O') {
+    scoreO++
+    executedScore = true
+  }
+  document.getElementById('score').innerText = `X: ${scoreX} and O: ${scoreO}`
+}
 
 // ************************
 // function to start game
@@ -99,6 +109,8 @@ const startGame = function () {
 // ************************
 const clearBoard = function (number) {
   document.getElementById('s' + number).innerText = ''
+  winner = ''
+  executedScore = false
 }
 document.getElementById('reset').addEventListener('click', startGame)
 
