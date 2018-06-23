@@ -46,30 +46,38 @@ const checkWinner = function () {
   } if (sq(1) !== '' && sq(1) === sq(2) && sq(2) === sq(3)) {
     message(`Congratulations, ${sq(1)}! You win!`)
     winner = sq(1)
+    removeDisplay()
     // console.log(winner)
   } else if (sq(4) !== '' && sq(4) === sq(5) && sq(5) === sq(6)) {
     message(`Congratulations, ${sq(4)}! You win!`)
     winner = sq(4)
+    removeDisplay()
   } else if (sq(7) !== '' && sq(7) === sq(8) && sq(8) === sq(9)) {
     message(`Congratulations, ${sq(7)}! You win!`)
     winner = sq(7)
+    removeDisplay()
     // for vertical rows
   } else if (sq(1) !== '' && sq(1) === sq(4) && sq(4) === sq(7)) {
     message(`Congratulations, ${sq(1)}! You win!`)
     winner = sq(1)
+    removeDisplay()
   } else if (sq(2) !== '' && sq(2) === sq(5) && sq(5) === sq(8)) {
     message(`Congratulations, ${sq(2)}! You win!`)
     winner = sq(2)
+    removeDisplay()
   } else if (sq(3) !== '' && sq(3) === sq(6) && sq(6) === sq(9)) {
     message(`Congratulations, ${sq(3)}! You win!`)
     winner = sq(3)
+    removeDisplay()
     // for diagonals
   } else if (sq(1) !== '' && sq(1) === sq(5) && sq(5) === sq(9)) {
     message(`Congratulations, ${sq(1)}! You win!`)
     winner = sq(1)
+    removeDisplay()
   } else if (sq(7) !== '' && sq(7) === sq(5) && sq(5) === sq(3)) {
     message(`Congratulations, ${sq(7)}! You win!`)
     winner = sq(7)
+    removeDisplay()
   } else {
     message(`No winner`)
   }
@@ -84,6 +92,10 @@ const message = function (msg) {
 
 const displayCurrentUser = function (currentUser) {
   document.getElementById('currentUser').innerText = `${currentUser}, it's your turn!`
+}
+
+const removeDisplay = function () {
+  document.getElementById('currentUser').innerText = ''
 }
 
 // ************************
