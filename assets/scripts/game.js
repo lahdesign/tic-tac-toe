@@ -27,9 +27,9 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
       $(this).html(userOne)
       currentUser = userOne
     }
+    checkWinner()
+    score(winner)
   }
-  checkWinner()
-  score(winner)
 })
 
 // ************************
@@ -85,6 +85,10 @@ const message = function (msg) {
 const displayCurrentUser = function (currentUser) {
   document.getElementById('message').innerText = `${currentUser}, it's your turn!`
 }
+// need to figure out how to display tie
+// const displayTie = function () {
+//   document.getElementById('message').innerText = 'You tied'
+// }
 
 // ************************
 // function to add win to score
