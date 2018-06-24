@@ -1,7 +1,7 @@
 // ************************
 // variables
 // ************************
-const userOne = 'X'
+const userOne = '🤟'
 const userTwo = 'O'
 let currentUser = userTwo
 let winner = ''
@@ -94,14 +94,14 @@ const displayCurrentUser = function (currentUser) {
 // function to add win to score
 // ************************
 const score = function (winner) {
-  if (!executedScore && winner === 'X') {
+  if (!executedScore && winner === userOne) {
     scoreX++
     executedScore = true
-  } else if (!executedScore && winner === 'O') {
+  } else if (!executedScore && winner === userTwo) {
     scoreO++
     executedScore = true
   }
-  document.getElementById('score').innerText = `X: ${scoreX} and O: ${scoreO}`
+  document.getElementById('score').innerText = `${userOne}: ${scoreX} and ${userTwo}: ${scoreO}`
 }
 
 // ************************
