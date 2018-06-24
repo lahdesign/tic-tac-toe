@@ -1,8 +1,8 @@
 // ************************
 // variables
 // ************************
-const userOne = '🤟'
-const userTwo = 'O'
+const userOne = '🌛'
+const userTwo = '🌞'
 let currentUser = userTwo
 let winner = ''
 let scoreO = 0
