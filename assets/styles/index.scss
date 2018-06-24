@@ -5,7 +5,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 // SETTINGS FOR BODY
 // **********************
 body { 
-    padding-top: 70px; 
+    // padding-top: 70px; 
     text-align: center;
     font: Georgia;
     font-family: 'Times New Roman', Times, serif;
@@ -56,15 +56,15 @@ td {
 // SETTINGS FOR SCORE
 // **********************
 #score {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 80px;
+    padding-bottom: 30px;
     font-size: 24px;
 }
 // **********************
 // SETTINGS FOR USER INFO DISPLAY
 // **********************
 .userInfo {
-    padding-bottom: 50px;
+    padding: 50px;
     font-size: 24px;
 }
 
@@ -73,9 +73,24 @@ td {
 // **********************
 footer {
     position: absolute;
-    bottom: 0;
+    // bottom: 0;
     width: 100%;
     height: 50px;
     background: #444;
     color: #aaa;
+    margin-top: 100px;
+}
+// **********************
+// SETTINGS FOR WELCOME
+// **********************
+.welcome {
+    background: black;
+    padding: 400px;
+}
+
+// **********************
+// SETTINGS FOR RESET BUTTONS
+// **********************
+.buttons {
+    padding-bottom: 100px;
 }
