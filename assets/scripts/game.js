@@ -122,7 +122,7 @@ const clearBoard = function (number) {
   executedScore = false
   message('')
 }
-document.getElementById('reset').addEventListener('click', startGame)
+document.getElementById('newGame').addEventListener('click', startGame)
 
 // ************************
 // function to reset score
