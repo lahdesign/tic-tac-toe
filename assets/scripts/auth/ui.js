@@ -32,7 +32,19 @@ const signOutSuccess = function () {
 const createSuccess = function (data) {
   $('#gameboard').removeClass('hidden')
   console.log('new board created')
-  store.user = data.game
+  store.game = data.game
+  store.game.id = data.game.id
+  console.log(store.game)
+  console.log(store.game.id)
+}
+
+const movesSuccess = function () {
+  $('#gameboard').removeClass('hidden')
+  console.log('moves')
+}
+
+const getGamesSuccess = function (data) {
+  console.log('old games')
 }
 
 const failure = function (error) {
@@ -47,5 +59,7 @@ module.exports = {
   changePassword,
   signOutSuccess,
   createSuccess,
+  movesSuccess,
+  getGamesSuccess,
   failure
 }
