@@ -11,6 +11,7 @@ const signUpSuccess = function (data) {
 const signInSuccess = function (data) {
   $('userMessage').text('Signed in successfully')
   $('userMessage').css('background-color', 'green')
+  $('#sign-out').removeClass('hidden')
   console.log('signInSuccess ran. Data is :', data)
   store.user = data.user
 }
