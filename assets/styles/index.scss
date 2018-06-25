@@ -126,5 +126,23 @@ footer {
 }
 
 .form {
-    margin: 10px;
+    margin: 15px;
+}
+
+.modal {
+   width: 600px;
+   height: 600px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -300px;
+   margin-top: -300px;
+}
+
+.clearfix {
+    padding: 20px;
+}
+
+label {
+    padding: 10px;
 }
