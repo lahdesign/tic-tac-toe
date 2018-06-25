@@ -12,6 +12,7 @@ const signInSuccess = function (data) {
   $('userMessage').text('Signed in successfully')
   $('userMessage').css('background-color', 'green')
   $('#sign-out').removeClass('hidden')
+  $('#play').removeClass('hidden')
   $('#resetScore').removeClass('hidden')
   $('#moves').removeClass('hidden')
   $('#getGames').removeClass('hidden')
