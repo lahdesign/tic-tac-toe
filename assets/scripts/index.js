@@ -8,6 +8,7 @@
 
 const authEvents = require('./auth/events')
 require('./game.js')
+require('./buttons.js')
 // require('./modals.js')
 
 $(() => {
