@@ -14,8 +14,12 @@ body {
     // height: 100%;
 }
 
+a {
+    color: #aaa;
+}
+
 main {
-    min-height: 790px;
+    min-height: 500px;
 }
 
 // **********************
@@ -26,22 +30,32 @@ h1 {
     font-size: 72px;
     color: #aaa;
 }
-// header {
-//     background-image: url(../../images/bg1.jpg)
-// }
 
 // **********************
-// SETTINGS FOR NAVBAR
+// SETTINGS FOR sign in / sign up
 // **********************
-nav {
-    text-align: right;
-    padding: 5px 15px;
-    margin: 0;
+.signInUp {
+    color: #aaa;
+    text-shadow: 2px 2px #111;
+    background-image: url('../../images/bg2.jpg');
+    height: 75%; 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+input {
+    margin: 2px; 
+}
+#sign-up {
+    padding: 20px;
+}
+#sign-in {
+    padding: 20px;
 }
 
 // **********************
 // SETTINGS FOR GAMEBOARD
 // **********************
+}
 table {
     margin: auto;
     font-size: 70px;
@@ -68,16 +82,16 @@ td {
 // SETTINGS FOR SCORE
 // **********************
 #score {
-    padding-top: 80px;
+    padding-top: 10px;
     padding-bottom: 30px;
     font-size: 24px;
 }
 // **********************
 // SETTINGS FOR USER INFO DISPLAY
 // **********************
-.userInfo {
+#message {
     padding-top: 70px;
-    padding-bottom: 100px; 
+    padding-bottom: 40px; 
     font-size: 24px;
 }
 
@@ -86,12 +100,16 @@ td {
 // **********************
 footer {
     position: absolute;
-    // bottom: 0;
     width: 100%;
-    height: 50px;
-    background: #444;
+    // height: 50px;
     color: #aaa;
     margin-top: 100px;
+    color: #222;
+    background-image: url('../../images/bg2.jpg');
+    height: 15%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 // **********************
 // SETTINGS FOR WELCOME
@@ -99,7 +117,14 @@ footer {
 .welcome {
     // background: black;
     padding: 400px;
-    background-image: url('../../images/bg1.jpg')
+    background-image: url('../../images/bg1.jpg');
+    height: 100%; 
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    color: #222;
 }
 
 // **********************
@@ -118,35 +143,7 @@ footer {
 }
 .buttons {
     margin: 20px 5px 5px 5px;
-}
-
-// **********************
-// SETTINGS FOR MODALS
-// **********************
-.container {
-    margin: 15px;
-}
-
-.form {
-    margin: 15px;
-}
-
-.modal {
-   width: 600px;
-   height: 600px;
-   position: absolute;
-   left: 50%;
-   top: 50%; 
-   margin-left: -300px;
-   margin-top: -300px;
-}
-
-.clearfix {
-    padding: 20px;
-}
-
-label {   
-    padding: 10px;
+    padding-bottom: 20px;
 }
 
 // **********************
