@@ -97,7 +97,12 @@ td {
 
 .userInfo {
     display: none;
+    padding: 5px;
 }
+#sign-out {
+    display: inline;
+}
+
 
 // **********************
 // SETTINGS FOR FOOTER
@@ -158,4 +163,5 @@ h1 {
     bottom:0;
     right:0;
 }
+
 
