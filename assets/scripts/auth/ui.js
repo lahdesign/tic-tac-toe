@@ -28,6 +28,12 @@ const signOutSuccess = function () {
   store.user = null
 }
 
+const createSuccess = function (data) {
+  $('#gameboard').removeClass('hidden')
+  console.log('new board created')
+  store.user = data.game
+}
+
 const failure = function (error) {
   $('userMessage').text('Error')
   $('userMessage').css('background-color', 'red')
@@ -39,5 +45,6 @@ module.exports = {
   signInSuccess,
   changePassword,
   signOutSuccess,
+  createSuccess,
   failure
 }

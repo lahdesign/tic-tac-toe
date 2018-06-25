@@ -1,7 +1,7 @@
 'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields')
-
+const game = require('../game.js')
 const api = require('./api')
 const ui = require('./ui')
 
@@ -49,11 +49,21 @@ const onSignOut = function (event) {
     .catch(ui.failure)
 }
 
+const onCreateGame = function (event) {
+  event.preventDefault()
+  game.startGame()
+
+  api.createGame()
+    .then(ui.createSuccess)
+    .catch(ui.createSuccess)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  $('#newGame').on('click', onCreateGame)
 }
 
 module.exports = {
