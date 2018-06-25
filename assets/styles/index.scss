@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    min-height: 600px;
+    min-height: 680px;
 }
 
 // **********************
@@ -35,6 +35,8 @@ h1 {
 // **********************
 nav {
     text-align: right;
+    padding: 5px 15px;
+    margin: 0;
 }
 
 // **********************
@@ -143,7 +145,7 @@ footer {
     padding: 20px;
 }
 
-label {
+label {   
     padding: 10px;
 }
 
