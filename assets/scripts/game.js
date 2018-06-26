@@ -23,18 +23,18 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
   if (winner === '' && square.target.innerHTML === '') {
     displayCurrentUser(currentUser)
     // console.log(square.target.innerHTML)
-    console.log(square.target.id)
     // console.log(square.target)
     // console.log(square)
     if (currentUser === userOne) {
+      // console.log(square.target)
       $(this).html(userTwo)
       gameValues.v = currentUser
-      gameValues.i = square.target.id
+      gameValues.i = square.target.index
       currentUser = userTwo
     } else if (currentUser === userTwo) {
       $(this).html(userOne)
       gameValues.v = currentUser
-      gameValues.i = square.target.id
+      gameValues.i = square.target.index
       currentUser = userOne
     }
     checkWinner()
