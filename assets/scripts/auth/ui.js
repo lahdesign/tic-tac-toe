@@ -11,9 +11,9 @@ const signUpSuccess = function (data) {
 const signInSuccess = function (data) {
   $('#userMessage').text('Signed in successfully')
   $('#userMessage').css('background-color', '888')
-  $('#sign-out').removeClass('hidden')
+  // $('#sign-out').removeClass('hidden')
   // $('.userInfo').removeClass('hidden')
-  $('.userButtons').removeClass('hidden')
+  $('.userButtons').css('display', 'block')
   $('.signInUp').css('display', 'none')
   // $('#moves').removeClass('hidden')
   // $('#getGames').removeClass('hidden')
@@ -39,7 +39,7 @@ const signOutSuccess = function () {
 }
 
 const createSuccess = function (data) {
-  $('#gameboard').removeClass('hidden')
+  $('#gameboard').css('display', 'block')
   console.log('new board created')
   store.game = data.game
   store.game.id = data.game.id
