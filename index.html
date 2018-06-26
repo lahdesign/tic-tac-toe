@@ -31,7 +31,7 @@
           <form id="sign-up">
             <fieldset>
               <h2>Sign Up!</h2>
-              <input type="text" name="credentials[email]" placeholder="Email"><br>
+              <input type="email" name="credentials[email]" placeholder="Email"><br>
               <input type="password" name="credentials[password]" placeholder="Password"><br>
               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
               <input type="submit" value="Sign Up!">
@@ -58,7 +58,7 @@
       <!-- Game board! -->
       <div id='userMessage'></div>
       <main id='main'>
-        <div  id='gameboard' class='hidden'>
+        <div  id='gameboard'>
           <div id='message'>messages will go here</div>
           
           <table id='theBoard'>
@@ -81,7 +81,7 @@
         </div>
         
       </main>
-      <div class='userButtons hidden'>
+      <div class='userButtons'>
           <div id='score'></div>
           <div class='buttons'>
             <button class = 'button' id='newGame'>New Game</button>
