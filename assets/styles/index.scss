@@ -52,6 +52,9 @@ input {
 // **********************
 // SETTINGS FOR GAMEBOARD
 // **********************
+#gameboard {
+    display: none;
+}
 table {
     margin: auto;
     font-size: 70px;
