@@ -26,13 +26,13 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
     // console.log(square)
     if (currentUser === userOne) {
       $(this).html(userTwo)
+      // gameValues.v = currentUser
+      // gameValues.i = square.target.id
       currentUser = userTwo
       gameValues.i = square.target.id
       gameValues.v = userOne
     } else if (currentUser === userTwo) {
       $(this).html(userOne)
-      // gameValues.v = currentUser
-      // gameValues.i = square.target.id
       currentUser = userOne
       gameValues.i = square.target.id
       gameValues.v = userTwo

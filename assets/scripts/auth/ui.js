@@ -40,9 +40,9 @@ const signOutSuccess = function () {
 
 const createSuccess = function (data) {
   $('#gameboard').css('display', 'block')
-  // console.log('new board created')
-  // store.game = data.game
-  // store.game.id = data.game.id
+  console.log('new board created')
+  store.game = data.game
+  store.game.id = data.game.id
   console.log(store.game)
   console.log(store.game.id)
 }
@@ -54,8 +54,8 @@ const movesSuccess = function () {
 const getGamesSuccess = function (data) {
   $('#view-games').css('display', 'block')
   for (let i = 0; i < data.games.length; i++) {
-    $('#view-games').append('<p><b>ID:</b>' + data.games[i].id + '  <b>Game Squares</b>' + data.games[i].cells + '</p>')
-    // console.log(data.games[i])
+    $('#view-games').append('<p><b>ID:</b>' + data.games[i].id + '    <b>Game Squares</b>' + data.games[i].cells + '</p>')
+    console.log(data.games[i])
   }
   // console.log('old games')
 }
