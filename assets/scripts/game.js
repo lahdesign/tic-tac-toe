@@ -18,6 +18,23 @@ const gameValues = {
 // ************************
 // Game play
 // ************************
+// let boardStorage = []
+
+// const boardToArray = () => {
+//   const tds = $('#theBoard td')
+//   let count = 0
+//   let tempTds = ''
+//   for (let td = 0; td < tds.length; ++td) {
+//     // Ternary conditions, making sure that the array will be able to have empty values(non-clicked cells in the board)
+//     tds[td].innerHTML === '' ? (tempTds += ' ') : (tempTds += tds[td].innerHTML)
+//     ++count // Counting to check everytime the loop increments to the given dimension
+
+//     count === 9 // Ternary condition, if the counter is equal the dimension
+//       ? (boardStorage.push(tempTds.split('')), tempTds = '', count = 0)
+//       : count
+//   }
+//   console.log(boardStorage)
+// }
 
 const playerMoves = $('.col1, .col2, .col3').click(function (square) {
   if (winner === '' && square.target.innerHTML === '') {
@@ -25,17 +42,30 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
     // console.log(square.target.innerHTML)
     // console.log(square.target)
     // console.log(square)
+    // boardToArray(boardStorage)
+
     if (currentUser === userOne) {
       // console.log(square.target)
       $(this).html(userTwo)
-      gameValues.v = currentUser
-      gameValues.i = square.target.index
+      // gameValues = boardStorage
+      // gameValues.v = currentUser
+      // gameValues.i = square.target.id
       currentUser = userTwo
+      gameValues.i = square.target.id
+      // console.log(square.target.id)
+      gameValues.v = userOne
+      // console.log(gameValues.v)
+      // boardStorage = []
     } else if (currentUser === userTwo) {
+      // boardToArray()
       $(this).html(userOne)
-      gameValues.v = currentUser
-      gameValues.i = square.target.index
+      // gameValues.v = currentUser
+      // gameValues.i = square.target.id
       currentUser = userOne
+      // gameValues.i = boardStorage
+      gameValues.i = square.target.id
+      gameValues.v = userTwo
+      // boardStorage = []
     }
     checkWinner()
     score(winner)
@@ -44,29 +74,34 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
 
 // ************************
 // function to determine winner
-// ************************
+// // ************************
 const sq = function (number) {
-  return document.getElementById('s' + number).innerText
+  return document.getElementById(number).innerText
 }
 
 const checkWinner = function () {
-  for (let i = 1; i <= 9; i++) {
-    sq(i)
+  for (let i = 0; i <= 8; i++) {
+    let num = i.toString()
+    sq(num)
     // for horizantal rows
-  } if (sq(1) !== '' && sq(1) === sq(2) && sq(2) === sq(3)) {
-    message(`Congratulations, ${sq(1)}! You win!`)
-    winner = sq(1)
+  } if (sq(0) !== '' && sq(0) === sq(1) && sq(1) === sq(2)) {
+    message(`Congratulations, ${sq(0)}! You win!`)
+    winner = sq(0)
     gameValues.isOver = true
     console.log(winner)
-  } else if (sq(4) !== '' && sq(4) === sq(5) && sq(5) === sq(6)) {
+  } else if (sq(3) !== '' && sq(3) === sq(4) && sq(4) === sq(5)) {
     message(`Congratulations, ${sq(4)}! You win!`)
     winner = sq(4)
     gameValues.isOver = true
-  } else if (sq(7) !== '' && sq(7) === sq(8) && sq(8) === sq(9)) {
+  } else if (sq(6) !== '' && sq(6) === sq(7) && sq(7) === sq(8)) {
     message(`Congratulations, ${sq(7)}! You win!`)
     winner = sq(7)
     gameValues.isOver = true
     // for vertical rows
+  } else if (sq(0) !== '' && sq(0) === sq(3) && sq(3) === sq(6)) {
+    message(`Congratulations, ${sq(0)}! You win!`)
+    winner = sq(0)
+    gameValues.isOver = true
   } else if (sq(1) !== '' && sq(1) === sq(4) && sq(4) === sq(7)) {
     message(`Congratulations, ${sq(1)}! You win!`)
     winner = sq(1)
@@ -75,18 +110,14 @@ const checkWinner = function () {
     message(`Congratulations, ${sq(2)}! You win!`)
     winner = sq(2)
     gameValues.isOver = true
-  } else if (sq(3) !== '' && sq(3) === sq(6) && sq(6) === sq(9)) {
-    message(`Congratulations, ${sq(3)}! You win!`)
-    winner = sq(3)
-    gameValues.isOver = true
     // for diagonals
-  } else if (sq(1) !== '' && sq(1) === sq(5) && sq(5) === sq(9)) {
-    message(`Congratulations, ${sq(1)}! You win!`)
-    winner = sq(1)
+  } else if (sq(0) !== '' && sq(0) === sq(4) && sq(4) === sq(8)) {
+    message(`Congratulations, ${sq(0)}! You win!`)
+    winner = sq(0)
     gameValues.isOver = true
-  } else if (sq(7) !== '' && sq(7) === sq(5) && sq(5) === sq(3)) {
+  } else if (sq(6) !== '' && sq(6) === sq(4) && sq(4) === sq(2)) {
     message(`Congratulations, ${sq(7)}! You win!`)
-    winner = sq(7)
+    winner = sq(6)
     gameValues.isOver = true
   } else {
     // message(`No winner`)
@@ -126,8 +157,9 @@ const score = function (winner) {
 // function to start game
 // ************************
 const startGame = function () {
-  for (let i = 1; i <= 9; i = i + 1) {
-    clearBoard(i)
+  for (let i = 0; i <= 8; i++) {
+    let num = i.toString()
+    clearBoard(num)
   }
 }
 
@@ -135,7 +167,7 @@ const startGame = function () {
 // function to reset game
 // ************************
 const clearBoard = function (number) {
-  document.getElementById('s' + number).innerText = ''
+  document.getElementById(number).innerText = ''
   winner = ''
   executedScore = false
   message('')
@@ -158,6 +190,7 @@ document.getElementById('resetScore').addEventListener('click', resetScore)
 module.exports = {
   playerMoves,
   startGame,
-  clearBoard,
+  // clearBoard,
   gameValues
+  // boardStorage
 }
