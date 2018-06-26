@@ -5,19 +5,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 // SETTINGS FOR BODY
 // **********************
 body { 
-    // padding-top: 70px; 
     text-align: center;
     font: Georgia;
     font-family: 'Times New Roman', Times, serif;
     background-color: #222;
     color: #aaa;
-    // height: 100%;
 }
-
 a {
     color: #aaa;
 }
-
 main {
     min-height: 600px;
 }
@@ -42,6 +38,7 @@ h1 {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+}
 input {
     margin: 2px; 
 }
@@ -55,7 +52,6 @@ input {
 // **********************
 // SETTINGS FOR GAMEBOARD
 // **********************
-}
 table {
     margin: auto;
     font-size: 70px;
@@ -128,7 +124,7 @@ footer {
 // **********************
 .welcome {
     // background: black;
-    padding: 400px;
+    padding: 400px 0;
     background-image: url('../../images/bg1.jpg');
     height: 100%; 
     background-position: center bottom;
@@ -166,5 +162,3 @@ h1 {
     bottom:0;
     right:0;
 }
-
-
