@@ -18,24 +18,6 @@ const gameValues = {
 // ************************
 // Game play
 // ************************
-// let boardStorage = []
-
-// const boardToArray = () => {
-//   const tds = $('#theBoard td')
-//   let count = 0
-//   let tempTds = ''
-//   for (let td = 0; td < tds.length; ++td) {
-//     // Ternary conditions, making sure that the array will be able to have empty values(non-clicked cells in the board)
-//     tds[td].innerHTML === '' ? (tempTds += ' ') : (tempTds += tds[td].innerHTML)
-//     ++count // Counting to check everytime the loop increments to the given dimension
-
-//     count === 9 // Ternary condition, if the counter is equal the dimension
-//       ? (boardStorage.push(tempTds.split('')), tempTds = '', count = 0)
-//       : count
-//   }
-//   console.log(boardStorage)
-// }
-
 const playerMoves = $('.col1, .col2, .col3').click(function (square) {
   if (winner === '' && square.target.innerHTML === '') {
     displayCurrentUser(currentUser)
@@ -54,6 +36,8 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
       gameValues.i = square.target.id
       // console.log(square.target.id)
       gameValues.v = userOne
+      console.log(gameValues.i)
+      console.log(gameValues.v)
       // console.log(gameValues.v)
       // boardStorage = []
     } else if (currentUser === userTwo) {
@@ -81,7 +65,7 @@ const sq = function (number) {
 
 const checkWinner = function () {
   for (let i = 0; i <= 8; i++) {
-    let num = i.toString()
+    const num = i.toString()
     sq(num)
     // for horizantal rows
   } if (sq(0) !== '' && sq(0) === sq(1) && sq(1) === sq(2)) {
@@ -119,8 +103,9 @@ const checkWinner = function () {
     message(`Congratulations, ${sq(7)}! You win!`)
     winner = sq(6)
     gameValues.isOver = true
-  } else {
-    // message(`No winner`)
+  } else if (sq(0) !=='' && sq(1) !=='' && sq(2) !=='' && sq(3) !=='' && sq(4) !=='' && sq(5) !=='' && sq(6) !=='' && sq(7) !=='' && sq(8) !=='') {
+    message(`You tied!`)
+    gameValues.isOver = true
   }
 }
 
@@ -158,7 +143,7 @@ const score = function (winner) {
 // ************************
 const startGame = function () {
   for (let i = 0; i <= 8; i++) {
-    let num = i.toString()
+    const num = i.toString()
     clearBoard(num)
   }
 }
