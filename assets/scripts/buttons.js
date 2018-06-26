@@ -8,3 +8,9 @@ $(document).ready(function () {
     $('.userInfo').toggle()
   })
 })
+
+$(document).ready(function () {
+  $('#changePassword').click(function () {
+    $('#change-password').toggle()
+  })
+})
