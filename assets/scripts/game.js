@@ -24,32 +24,18 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
     // console.log(square.target.innerHTML)
     // console.log(square.target)
     // console.log(square)
-    // boardToArray(boardStorage)
-
     if (currentUser === userOne) {
-      // console.log(square.target)
       $(this).html(userTwo)
-      // gameValues = boardStorage
-      // gameValues.v = currentUser
-      // gameValues.i = square.target.id
       currentUser = userTwo
       gameValues.i = square.target.id
-      // console.log(square.target.id)
       gameValues.v = userOne
-      console.log(gameValues.i)
-      console.log(gameValues.v)
-      // console.log(gameValues.v)
-      // boardStorage = []
     } else if (currentUser === userTwo) {
-      // boardToArray()
       $(this).html(userOne)
       // gameValues.v = currentUser
       // gameValues.i = square.target.id
       currentUser = userOne
-      // gameValues.i = boardStorage
       gameValues.i = square.target.id
       gameValues.v = userTwo
-      // boardStorage = []
     }
     checkWinner()
     score(winner)
@@ -103,7 +89,7 @@ const checkWinner = function () {
     message(`Congratulations, ${sq(7)}! You win!`)
     winner = sq(6)
     gameValues.isOver = true
-  } else if (sq(0) !=='' && sq(1) !=='' && sq(2) !=='' && sq(3) !=='' && sq(4) !=='' && sq(5) !=='' && sq(6) !=='' && sq(7) !=='' && sq(8) !=='') {
+  } else if (sq(0) !== '' && sq(1) !== '' && sq(2) !== '' && sq(3) !== '' && sq(4) !== '' && sq(5) !== '' && sq(6) !== '' && sq(7) !== '' && sq(8) !== '') {
     message(`You tied!`)
     gameValues.isOver = true
   }
@@ -119,10 +105,6 @@ const message = function (msg) {
 const displayCurrentUser = function (currentUser) {
   document.getElementById('message').innerText = `${currentUser}, it's your turn!`
 }
-// need to figure out how to display tie
-// const displayTie = function () {
-//   document.getElementById('message').innerText = 'You tied'
-// }
 
 // ************************
 // function to add win to score
@@ -175,7 +157,5 @@ document.getElementById('resetScore').addEventListener('click', resetScore)
 module.exports = {
   playerMoves,
   startGame,
-  // clearBoard,
   gameValues
-  // boardStorage
 }
