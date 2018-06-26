@@ -43,8 +43,8 @@ const createSuccess = function (data) {
   // console.log('new board created')
   // store.game = data.game
   // store.game.id = data.game.id
-  // console.log(store.game)
-  // console.log(store.game.id)
+  console.log(store.game)
+  console.log(store.game.id)
 }
 
 const movesSuccess = function () {
