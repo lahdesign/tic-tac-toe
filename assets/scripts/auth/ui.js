@@ -13,7 +13,7 @@ const signInSuccess = function (data) {
   $('#userMessage').css('background-color', '888')
   $('#sign-out').removeClass('hidden')
   // $('.userInfo').removeClass('hidden')
-  $('.userButtons').removeClass('hidden')
+  $('.userButtons').css('display', 'block')
   $('.signInUp').css('display', 'none')
   // $('#moves').removeClass('hidden')
   // $('#getGames').removeClass('hidden')
