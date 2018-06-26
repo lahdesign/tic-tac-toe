@@ -60,15 +60,14 @@ const onCreateGame = function (event) {
 
 const onMoves = function (event) {
   event.preventDefault()
-
-  api.userMoves()
+  const data = game.gameValues
+  api.userMoves(data.i, data.v, data.isOver)
     .then(ui.movesSuccess)
     .catch(ui.movesSuccess)
 }
 
 const onGetGames = function (event) {
   event.preventDefault()
-
   api.getGames()
     .then(ui.getGamesSuccess)
     .catch(ui.getGamesSuccess)
@@ -80,7 +79,7 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('#newGame').on('click', onCreateGame)
-  $('#moves').on('click', onMoves)
+  $('.col1, .col2, .col3').on('click', onMoves)
   $('#getGames').on('click', onGetGames)
 }
 
