@@ -14,7 +14,7 @@ const signInSuccess = function (data) {
   $('#sign-out').removeClass('hidden')
   // $('.userInfo').removeClass('hidden')
   $('.userButtons').removeClass('hidden')
-  $('.signInUp').css("display", "none")
+  $('.signInUp').css('display', 'none')
   // $('#moves').removeClass('hidden')
   // $('#getGames').removeClass('hidden')
   console.log('signInSuccess ran. Data is :', data)
@@ -30,10 +30,10 @@ const changePassword = function (data) {
 const signOutSuccess = function () {
   $('#userMessage').text('Signed out successfully')
   $('#userMessage').css('background-color', '888')
-  $('.signInUp').css("display", "block")
-  $('#gameboard').css("display", "none")
-  $('.userButtons').css("display", "none")
-  $('.userInfo').css("display", "none")
+  $('.signInUp').css('display', 'block')
+  $('#gameboard').css('display', 'none')
+  $('.userButtons').css('display', 'none')
+  $('.userInfo').css('display', 'none')
   console.log('signOutSuccess ran, and has nothing to return')
   store.user = null
 }
@@ -48,7 +48,6 @@ const createSuccess = function (data) {
 }
 
 const movesSuccess = function () {
-  $('#gameboard').removeClass('hidden')
   console.log('moves')
 }
 
