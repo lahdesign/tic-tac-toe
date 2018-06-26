@@ -55,7 +55,7 @@ const getGamesSuccess = function (data) {
   $('#view-games').css('display', 'block')
   for (let i = 0; i < data.games.length; i++) {
     $('#games-content').append('<div>Game ID:' + data.games[i].id + '</div>')
-    $('#games-content').append('<div>Game STATE:' + data.games[i].cells + '</div>')
+    $('#games-content').append('<div>Game Cells' + data.games[i].cells + '</div>')
     console.log(data.games[i])
   }
   console.log('old games')
