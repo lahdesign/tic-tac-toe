@@ -1,9 +1,4 @@
-// $('#seeInfo').click(function () {
-//   $('.userInfo').css('display', 'none')
-//   $('.userInfo').css('display', 'block')
-// })
-
-// Function to toggle user info
+// function to toggle user info
 $(document).ready(function () {
   $('#seeInfo').click(function () {
     $('.userInfo').toggle()
@@ -21,6 +16,14 @@ $(document).ready(function () {
   $('#getGames').click(function () {
     $('#view-games').css('display', 'block')
     // $('#view-games').toggle()
+  })
+})
+
+// Function to clear user sign in messages
+$(document).ready(function () {
+  $('#newGame').click(function () {
+    $('#userMessage').text('')
+    $('#userMessage').css('background-color', '222')
   })
 })
 
