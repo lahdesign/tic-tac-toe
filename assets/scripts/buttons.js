@@ -1,8 +1,3 @@
-// $('#seeInfo').click(function () {
-//   $('.userInfo').css('display', 'none')
-//   $('.userInfo').css('display', 'block')
-// })
-
 // function to toggle user info
 $(document).ready(function () {
   $('#seeInfo').click(function () {
