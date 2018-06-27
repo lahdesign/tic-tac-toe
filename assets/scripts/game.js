@@ -144,7 +144,7 @@ const clearBoard = function (number) {
   winner = ''
   executedScore = false
   message('')
-  $('#gameboard').css('background-image', 'none')
+  $('#main').css('background-image', 'none')
 }
 document.getElementById('newGame').addEventListener('click', startGame)
 
