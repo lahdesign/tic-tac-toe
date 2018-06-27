@@ -127,9 +127,15 @@ footer {
 }
 
 footer > p {
-    line-height: 100px;
+    line-height: 50px;
     color: #eee;
     text-shadow: 2px 2px 4px #111;
+}
+
+.inverse {
+    font-size: 18px;
+    color: #eee;
+    text-shadow: 4px 4px 4px #111;
 }
 
 // **********************
