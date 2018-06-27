@@ -16,8 +16,9 @@ const signInSuccess = function (data) {
 }
 
 const changePasswordSuccess = function (data) {
-  $('#userMessage').text('Password changed successfully')
-  $('#userMessage').css('background-color', '#003')
+  $('#changedPassword').text('Password changed successfully')
+  $('#changedPassword').css('background-color', '#003')
+  $('#change-password').css('display', 'none')
 }
 
 const signOutSuccess = function () {
