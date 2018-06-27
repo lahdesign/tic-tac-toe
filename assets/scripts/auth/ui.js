@@ -4,12 +4,10 @@ const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#userMessage').text('Signed up successfully')
-  $('#userMessage').css('background-color', '#003')
 }
 
 const signInSuccess = function (data) {
   $('#userMessage').text('Signed in successfully')
-  $('#userMessage').css('background-color', '#003')
   $('.userButtons').css('display', 'block')
   $('.signInUp').css('display', 'none')
   store.user = data.user
@@ -17,13 +15,12 @@ const signInSuccess = function (data) {
 
 const changePasswordSuccess = function (data) {
   $('#changedPassword').text('Password changed successfully')
-  $('#changedPassword').css('background-color', '#003')
+  $('#changedPassword').css('background-color', '#103656')
   $('#change-password').css('display', 'none')
 }
 
 const signOutSuccess = function () {
   $('#userMessage').text('Signed out successfully')
-  $('#userMessage').css('background-color', '#003')
   $('.signInUp').css('display', 'block')
   $('#gameboard').css('display', 'none')
   $('.userButtons').css('display', 'none')
