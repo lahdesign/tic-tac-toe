@@ -22,10 +22,7 @@ const playerMoves = $('.col1, .col2, .col3').click(function (square) {
     // console.log(square.target)
     // console.log(square)
     if (currentUser === userOne) {
-      // console.log(square.target)
       $(this).html(userTwo)
-      // gameValues.v = currentUser
-      // gameValues.i = square.target.id
       currentUser = userTwo
       gameValues.i = square.target.id
       gameValues.v = userOne
