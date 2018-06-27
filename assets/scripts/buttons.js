@@ -25,6 +25,14 @@ $(document).ready(function () {
   })
 })
 
+// Function to clear messages
+$(document).ready(function () {
+  $('#newGame').click(function () {
+    $('#userMessage').text('')
+    $('#userMessage').css('background-color', '222')
+  })
+})
+
 // Function to validate emails
 const validateEmail = function (email) {
   const re = /\S+@\S+/
