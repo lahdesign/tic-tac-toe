@@ -191,7 +191,29 @@ h1 {
 }
 
 #changedPassword {
-    margin: 15px auto;
-    padding: 10px;
-    width: 500px;
+    margin-top: 10px;
+    // padding: 10px;
+    // width: 475px;
+    background-image: url('../../images/bg2.jpg');
+    height: 15%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #eee;
+    text-shadow: 2px 2px 4px #111;
+    font-size: 24px;
+}
+
+// **********************		
+// SETTINGS FOR USER SIGN UP / IN / OUT	
+// **********************	
+#userMessage {
+    background-image: url('../../images/bg2.jpg');
+    height: 15%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #eee;
+    text-shadow: 2px 2px 4px #111;
+    font-size: 24px;
 }
