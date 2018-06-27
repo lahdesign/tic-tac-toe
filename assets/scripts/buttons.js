@@ -20,7 +20,7 @@ $(document).ready(function () {
   })
 })
 
-// Function to clear messages
+// Function to clear user sign in messages
 $(document).ready(function () {
   $('#newGame').click(function () {
     $('#userMessage').text('')
