@@ -14,8 +14,7 @@ $(document).ready(function () {
 // Function to toggle past games
 $(document).ready(function () {
   $('#getGames').click(function () {
-    $('#view-games').css('display', 'block')
-    // $('#view-games').toggle()
+    $('#view-games').toggle()
   })
 })
 
@@ -24,6 +23,8 @@ $(document).ready(function () {
   $('#newGame').click(function () {
     $('#userMessage').text('')
     $('#userMessage').css('background-color', '222')
+    $('#changedPassword').text('')
+    $('#changedPassword').css('background-color', '222')
   })
 })
 
