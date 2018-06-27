@@ -36,7 +36,7 @@ In addition to the requirements for this project, I tried to add some unique fea
 - I included a message to notify which player's turn is next. 
 
 ## Wireframes
-![Tic Tac Toe Wireframe](https://i.imgur.com/9MylqWT.png)
+![Tic Tac Toe Wireframe](https://imgur.com/WQJGVL7)
 
 ## Updates
 I am currently working on a few new features:
