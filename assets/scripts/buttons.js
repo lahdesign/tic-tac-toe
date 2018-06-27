@@ -15,8 +15,7 @@ $(document).ready(function () {
 // Function to toggle past games
 $(document).ready(function () {
   $('#getGames').click(function () {
-    $('#view-games').css('display', 'block')
-    // $('#view-games').toggle()
+    $('#view-games').toggle()
   })
 })
 
