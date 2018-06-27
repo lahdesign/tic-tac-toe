@@ -4,25 +4,25 @@ const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#userMessage').text('Signed up successfully')
-  $('#userMessage').css('background-color', '888')
+  $('#userMessage').css('background-color', '#033')
 }
 
 const signInSuccess = function (data) {
   $('#userMessage').text('Signed in successfully')
-  $('#userMessage').css('background-color', '888')
+  $('#userMessage').css('background-color', '#033')
   $('.userButtons').css('display', 'block')
   $('.signInUp').css('display', 'none')
   store.user = data.user
 }
 
-const changePassword = function (data) {
+const changePasswordSuccess = function (data) {
   $('#userMessage').text('Password changed successfully')
-  $('#userMessage').css('background-color', '#888')
+  $('#userMessage').css('background-color', '#033')
 }
 
 const signOutSuccess = function () {
   $('#userMessage').text('Signed out successfully')
-  $('#userMessage').css('background-color', '888')
+  $('#userMessage').css('background-color', '#033')
   $('.signInUp').css('display', 'block')
   $('#gameboard').css('display', 'none')
   $('.userButtons').css('display', 'none')
@@ -50,14 +50,14 @@ const getGamesSuccess = function (data) {
 
 const failure = function () {
   $('#userMessage').text('Error')
-  $('#userMessage').css('background-color', 'red')
+  $('#userMessage').css('background-color', '#800')
   // console.log('Failure ran. Error is :', error)
 }
 
 module.exports = {
   signUpSuccess,
   signInSuccess,
-  changePassword,
+  changePasswordSuccess,
   signOutSuccess,
   createSuccess,
   movesSuccess,
