@@ -50,9 +50,18 @@ const checkWinner = function () {
     sq(num)
     // for horizantal rows
   } if (sq(0) !== '' && sq(0) === sq(1) && sq(1) === sq(2)) {
-    message(`Congratulations, ${sq(0)}! You win!`)
+    message(`Congratulations, ${currentUser}! You win!`)
+    $('#main').css('background-repeat', 'no-repeat')
+    $('#main').css('background-size', 'cover')
+    $('#main').css('background-position', 'center')
+    $('#main').css('height', '100%')
     winner = sq(0)
     gameValues.isOver = true
+    if (currentUser === userOne) {
+      $('#main').css('background-image', 'url(../../images/moon.gif)')
+    } else if (currentUser === userTwo) {
+      $('#main').css('background-image', 'url(../../images/sun2.gif)')
+    }
     console.log(winner)
   } else if (sq(3) !== '' && sq(3) === sq(4) && sq(4) === sq(5)) {
     message(`Congratulations, ${sq(4)}! You win!`)
@@ -81,12 +90,14 @@ const checkWinner = function () {
     winner = sq(0)
     gameValues.isOver = true
   } else if (sq(6) !== '' && sq(6) === sq(4) && sq(4) === sq(2)) {
-    message(`Congratulations, ${sq(7)}! You win!`)
+    message(`Congratulations, ${sq(6)}! You win!`)
     winner = sq(6)
     gameValues.isOver = true
   } else if (sq(0) !== '' && sq(1) !== '' && sq(2) !== '' && sq(3) !== '' && sq(4) !== '' && sq(5) !== '' && sq(6) !== '' && sq(7) !== '' && sq(8) !== '') {
     message(`You tied!`)
     gameValues.isOver = true
+    $('#main').css('background-size', 'cover')
+    $('#main').css('background-image', 'url(../../images/fireworks.gif)')
   }
 }
 
@@ -133,6 +144,7 @@ const clearBoard = function (number) {
   winner = ''
   executedScore = false
   message('')
+  $('#gameboard').css('background-image', 'none')
 }
 document.getElementById('newGame').addEventListener('click', startGame)
 
