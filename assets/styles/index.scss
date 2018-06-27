@@ -126,6 +126,12 @@ footer {
     background-size: cover;
 }
 
+footer > p {
+    line-height: 100px;
+    color: #eee;
+    text-shadow: 2px 2px 4px #111;
+}
+
 // **********************
 // SETTINGS FOR WELCOME
 // **********************
