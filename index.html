@@ -87,26 +87,26 @@
 
       <!-- User info -->
       <div class='userInfo'>
-          <button class = 'button' id='changePassword'>Change Password</button>
-          <button class = 'button' id='getGames'>Old Games</button>
-          <form id="sign-out">
-            <input type="submit" class='button' value="Sign Out!">
+        <button class = 'button' id='changePassword'>Change Password</button>
+        <button class = 'button' id='getGames'>Old Games</button>
+        <form id="sign-out">
+          <input type="submit" class='button' value="Sign Out!">
+        </form>
+        <div>
+          <form id="change-password" class="border">
+            <fieldset>
+              <h3>Change Password</h3>
+              <input type="password" name="passwords[old]" placeholder="Old Password"><br>
+              <input type="password" name="passwords[new]" placeholder="New Password"><br><br>
+              <input type="submit" value="Change Password">
+            </fieldset>
           </form>
-          <div>
-            <form id="change-password" class="border">
-              <fieldset>
-                <h3>Change Password</h3>
-                <input type="password" name="passwords[old]" placeholder="Old Password"><br>
-                <input type="password" name="passwords[new]" placeholder="New Password"><br><br>
-                <input type="submit" value="Change Password">
-              </fieldset>
-            </form>
-            <div id="changedPassword"></div>  
-          </div>
-          <div id='view-games'>
-            <h3>Previous Games</h3>
-          </div>
+          <div id="changedPassword"></div>  
         </div>
+        <div id='view-games'>
+          <h3>Previous Games</h3>
+        </div>
+      </div>
       <!-- End User info -->
 
       <!-- Footer -->
