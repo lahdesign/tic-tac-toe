@@ -61,11 +61,7 @@ const checkWinner = function () {
         sq(0) !== '' && sq(0) === sq(4) && sq(4) === sq(8) ||
         sq(6) !== '' && sq(6) === sq(4) && sq(4) === sq(2)) {
     message(`Congratulations, ${currentUser}! You win!`)
-    $('#main').css('background-repeat', 'no-repeat')
-    $('#main').css('background-size', 'cover')
-    $('#main').css('background-position', 'center')
-    $('#main').css('height', '100%')
-    
+    $('#main').css({'background-repeat': 'no-repeat','background-size': 'cover', 'background-position': 'center', 'height': '100%'})
     gameValues.isOver = true
     if (currentUser === userOne) {
       $('#main').css('background-image', 'url(../../images/moon.gif)')
@@ -74,42 +70,10 @@ const checkWinner = function () {
       $('#main').css('background-image', 'url(../../images/sun2.gif)')
       winner = currentUser
     }
-    console.log(winner)
-  // } else if (sq(3) !== '' && sq(3) === sq(4) && sq(4) === sq(5)) {
-  //   message(`Congratulations, ${sq(4)}! You win!`)
-  //   winner = sq(4)
-  //   gameValues.isOver = true
-  // } else if (sq(6) !== '' && sq(6) === sq(7) && sq(7) === sq(8)) {
-  //   message(`Congratulations, ${sq(7)}! You win!`)
-  //   winner = sq(7)
-  //   gameValues.isOver = true
-  //   // for vertical rows
-  // } else if (sq(0) !== '' && sq(0) === sq(3) && sq(3) === sq(6)) {
-  //   message(`Congratulations, ${sq(0)}! You win!`)
-  //   winner = sq(0)
-  //   gameValues.isOver = true
-  // } else if (sq(1) !== '' && sq(1) === sq(4) && sq(4) === sq(7)) {
-  //   message(`Congratulations, ${sq(1)}! You win!`)
-  //   winner = sq(1)
-  //   gameValues.isOver = true
-  // } else if (sq(2) !== '' && sq(2) === sq(5) && sq(5) === sq(8)) {
-  //   message(`Congratulations, ${sq(2)}! You win!`)
-  //   winner = sq(2)
-  //   gameValues.isOver = true
-    // for diagonals
-  // } else if (sq(0) !== '' && sq(0) === sq(4) && sq(4) === sq(8)) {
-  //   message(`Congratulations, ${sq(0)}! You win!`)
-  //   winner = sq(0)
-  //   gameValues.isOver = true
-  // } else if (sq(6) !== '' && sq(6) === sq(4) && sq(4) === sq(2)) {
-  //   message(`Congratulations, ${sq(6)}! You win!`)
-  //   winner = sq(6)
-  //   gameValues.isOver = true
   } else if (sq(0) !== '' && sq(1) !== '' && sq(2) !== '' && sq(3) !== '' && sq(4) !== '' && sq(5) !== '' && sq(6) !== '' && sq(7) !== '' && sq(8) !== '') {
     message(`You tied!`)
     gameValues.isOver = true
-    $('#main').css('background-size', 'cover')
-    $('#main').css('background-image', 'url(../../images/fireworks.gif)')
+    $('#main').css({'background-size': 'cover', 'background-image': 'url(../../images/fireworks.gif)'})
   }
 }
 
