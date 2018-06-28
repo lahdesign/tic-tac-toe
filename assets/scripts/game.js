@@ -58,10 +58,7 @@ const checkWinner = function () {
         sq(0) !== '' && sq(0) === sq(4) && sq(4) === sq(8) ||
         sq(6) !== '' && sq(6) === sq(4) && sq(4) === sq(2)) {
     message(`Congratulations, ${currentUser}! You win!`)
-    $('#main').css('background-repeat', 'no-repeat')
-    $('#main').css('background-size', 'cover')
-    $('#main').css('background-position', 'center')
-    $('#main').css('height', '100%')
+    $('#main').css({'background-repeat': 'no-repeat','background-size': 'cover', 'background-position': 'center', 'height': '100%'})
     gameValues.isOver = true
     if (currentUser === userOne) {
       $('#main').css('background-image', 'url(../../images/moon.gif)')
@@ -73,8 +70,7 @@ const checkWinner = function () {
   } else if (sq(0) !== '' && sq(1) !== '' && sq(2) !== '' && sq(3) !== '' && sq(4) !== '' && sq(5) !== '' && sq(6) !== '' && sq(7) !== '' && sq(8) !== '') {
     message(`You tied!`)
     gameValues.isOver = true
-    $('#main').css('background-size', 'cover')
-    $('#main').css('background-image', 'url(../../images/fireworks.gif)')
+    $('#main').css({'background-size': 'cover', 'background-image': 'url(../../images/fireworks.gif)'})
   }
 }
 
