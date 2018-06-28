@@ -61,16 +61,16 @@ const checkWinner = function () {
     $('#main').css({'background-repeat': 'no-repeat','background-size': 'cover', 'background-position': 'center', 'height': '100%'})
     gameValues.isOver = true
     if (currentUser === userOne) {
-      $('#main').css('background-image', 'url(../../images/moon.gif)')
+      $('#main').css('background-image', 'url(../../public/moon.gif)')
       winner = currentUser
     } else if (currentUser === userTwo) {
-      $('#main').css('background-image', 'url(../../images/sun2.gif)')
+      $('#main').css('background-image', 'url(../../public/sun2.gif)')
       winner = currentUser
     }
   } else if (sq(0) !== '' && sq(1) !== '' && sq(2) !== '' && sq(3) !== '' && sq(4) !== '' && sq(5) !== '' && sq(6) !== '' && sq(7) !== '' && sq(8) !== '') {
     message(`You tied!`)
     gameValues.isOver = true
-    $('#main').css({'background-size': 'cover', 'background-image': 'url(../../images/fireworks.gif)'})
+    $('#main').css({'background-size': 'cover', 'background-image': 'url(../../public/fireworks.gif)'})
   }
 }
 
