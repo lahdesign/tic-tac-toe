@@ -4,6 +4,7 @@ const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#userMessage').text('Signed up successfully')
+  $('#sign-up')[0].reset()
 }
 
 const signInSuccess = function (data) {
@@ -11,6 +12,7 @@ const signInSuccess = function (data) {
   $('.userButtons').css('display', 'block')
   $('.signInUp').css('display', 'none')
   $('.sign-inup-buttons').css('display', 'none')
+  $('#sign-in')[0].reset()
   store.user = data.user
 }
 
@@ -19,6 +21,7 @@ const changePasswordSuccess = function (data) {
   $('#changedPassword').delay(3200).fadeOut(300)
   // $('#changedPassword').css('background-color', '#103656')
   $('#change-password').css('display', 'none')
+  $('#change-password')[0].reset()
 }
 
 const signOutSuccess = function () {
