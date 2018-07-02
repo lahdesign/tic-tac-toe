@@ -8,6 +8,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('#changePassword').click(function () {
     $('#change-password').toggle()
+    $()
   })
 })
 
@@ -23,8 +24,6 @@ $(document).ready(function () {
   $('#newGame').click(function () {
     $('#userMessage').text('')
     $('#userMessage').css('background-color', '222')
-    $('#changedPassword').text('')
-    $('#changedPassword').css('background-color', '222')
   })
 })
 
