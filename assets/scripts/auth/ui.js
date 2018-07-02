@@ -10,6 +10,7 @@ const signInSuccess = function (data) {
   $('#userMessage').text('Signed in successfully')
   $('.userButtons').css('display', 'block')
   $('.signInUp').css('display', 'none')
+  $('.sign-inup-buttons').css('display', 'none')
   store.user = data.user
 }
 
@@ -25,6 +26,7 @@ const signOutSuccess = function () {
   $('#gameboard').css('display', 'none')
   $('.userButtons').css('display', 'none')
   $('.userInfo').css('display', 'none')
+  $('.sign-inup-buttons').css('display', 'block')
   store.user = null
 }
 
