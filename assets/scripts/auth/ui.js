@@ -43,7 +43,7 @@ const movesSuccess = function () {
 
 const getGamesSuccess = function (data) {
   for (let i = 0; i < data.games.length; i++) {
-    $('#view-games').append('<p><b>ID:</b>' + data.games[i].id + '    <b>Game Squares</b><br>' + data.games[i].cells[0] + data.games[i].cells[1] + data.games[i].cells[2] + '<br>' + data.games[i].cells[3] + data.games[i].cells[4] + data.games[i].cells[5] + '<br>' + data.games[i].cells[6] + data.games[i].cells[7] + data.games[i].cells[8] + '</p>')
+    $('#view-games').append('<p><b>ID:</b>' + data.games[i].id + '    <b>Game Squares</b>' + data.games[i].cells + '</p>')
     // console.log(data.games[i])
   }
 }
