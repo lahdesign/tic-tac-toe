@@ -26,14 +26,18 @@ Some of the project requirements were:
 - Bootstrap
 - JavaScript
 - jQuery
+- Google Fonts
 
-The basic structure was built with HTML5, styling was done with CSS and Bootstrap. Game logic was built with JavaScript, and was used to send AJAX calls. JQuery was also used to interact with the DOM. 
+The basic structure was built with HTML5, styling was done with CSS and Bootstrap. Game logic was built with JavaScript and was used to send AJAX calls. JQuery was also used to interact with the DOM. 
 
 ## Features and Additions
 In addition to the requirements for this project, I tried to add some unique features. 
 
 - I styled the game to have a night sky theme. 
+- Instead of traditional X and O, I used 🌛 and 🌞 to stay with my theme.
 - I included a message to notify which player's turn is next. 
+- I added a button to reset the score. 
+- I added different gifs to be displayed based on which player wins and if there is a tie.
 
 ## Wireframes
 ![Tic Tac Toe Wireframe](https://i.imgur.com/WQJGVL7.png)
@@ -42,4 +46,3 @@ In addition to the requirements for this project, I tried to add some unique fea
 I am currently working on a few new features:
 - a feature to allow users to choose their playing piece from a list of emojis
 - a feature to allow users to play against a computer
-- a feature to have shooting stars for winning player
