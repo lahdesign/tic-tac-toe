@@ -138,11 +138,14 @@ const checkWinner = function () {
     message(`Congratulations, ${currentUser}! You win!`)
     $('#main').css({'background-repeat': 'no-repeat', 'background-size': 'cover', 'background-position': 'center', 'height': '100%'})
     gameValues.isOver = true
-    if (currentUser === userOne) {
-      $('#main').css('background-image', 'url(../../public/moon.gif)')
+    if (currentUser === '🦕') {
+      $('#main').css('background-image', 'url(../../public/brachio.gif)')
       winner = currentUser
     } else if (currentUser === '🦖') {
       $('#main').css('background-image', 'url(../../public/trex.gif)')
+      winner = currentUser
+    } else if (currentUser === userOne) {
+      $('#main').css('background-image', 'url(../../public/moon.gif)')
       winner = currentUser
     } else if (currentUser === userTwo) {
       $('#main').css('background-image', 'url(../../public/sun2.gif)')
