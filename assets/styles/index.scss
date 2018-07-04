@@ -74,6 +74,16 @@ input {
 // **********************
 // SETTINGS FOR GAMEBOARD
 // **********************
+#chooseUser {
+    display: none;
+    padding-top: 30px;
+    font-size: 18px;
+}
+#userOne {
+    margin-right: 30px;
+}
+
+
 #gameboard {
     display: none;		
 }
