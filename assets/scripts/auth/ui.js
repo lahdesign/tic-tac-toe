@@ -11,6 +11,7 @@ const signInSuccess = function (data) {
   $('.userButtons').css('display', 'block')
   $('.signInUp').css('display', 'none')
   $('.sign-inup-buttons').css('display', 'none')
+  $('#chooseUser').css('display', 'block')
   store.user = data.user
 }
 
