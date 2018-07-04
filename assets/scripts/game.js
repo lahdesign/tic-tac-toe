@@ -25,6 +25,9 @@ selectUserOne.onchange = function () {
     case '🌬':
       update('🌬')
       break
+    case '🦕':
+      update('🦕')
+      break
   }
 }
 
@@ -60,6 +63,9 @@ selectUserTwo.onchange = function () {
       break
     case '🏝':
       updateUserTwo('🏝')
+      break
+    case '🦖':
+      updateUserTwo('🦖')
       break
   }
 }
@@ -134,6 +140,9 @@ const checkWinner = function () {
     gameValues.isOver = true
     if (currentUser === userOne) {
       $('#main').css('background-image', 'url(../../public/moon.gif)')
+      winner = currentUser
+    } else if (currentUser === '🦖') {
+      $('#main').css('background-image', 'url(../../public/trex.gif)')
       winner = currentUser
     } else if (currentUser === userTwo) {
       $('#main').css('background-image', 'url(../../public/sun2.gif)')
