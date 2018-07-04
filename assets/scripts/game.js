@@ -142,7 +142,7 @@ const checkWinner = function () {
     $('#main').css({'background-repeat': 'no-repeat', 'background-size': 'cover', 'background-position': 'center', 'height': '100%'})
     gameValues.isOver = true
     if (currentUser === '🦕') {
-      $('#main').css('background-image', 'url(https://ashratigan.github.io/tic-tac-toe//public/brachio.gif)')
+      $('#main').css('background-image', 'url(https://ashratigan.github.io/tic-tac-toe/public/brachio.gif)')
       winner = currentUser
     } else if (currentUser === '🦖') {
       $('#main').css('background-image', 'url(https://ashratigan.github.io/tic-tac-toe/public/trex.gif)')
