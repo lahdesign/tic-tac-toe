@@ -7,20 +7,23 @@ selectUserOne.onchange = function () {
   const choice = selectUserOne.value
 
   switch (choice) {
-    case '🌖':
-      update('🌖')
+    case '🌜':
+      update('🌜')
       break
-    case '🌗':
-      update('🌗')
+    case '🛸':
+      update('🛸')
       break
-    case '🌘':
-      update('🌘')
+    case '🚀':
+      update('🚀')
+      break
+    case '🌌':
+      update('🌌')
       break
     case '🌒':
       update('🌒')
       break
-    case '🌓':
-      update('🌓')
+    case '🌬':
+      update('🌬')
       break
   }
 }
@@ -40,20 +43,23 @@ selectUserTwo.onchange = function () {
   const choice = selectUserTwo.value
 
   switch (choice) {
-    case '⚡️':
-      updateUserTwo('⚡️')
-      break
     case '🌞':
       updateUserTwo('🌞')
       break
-    case '💥':
-      updateUserTwo('💥')
+    case '🌋':
+      updateUserTwo('🌋')
       break
-    case '✨':
-      updateUserTwo('✨')
+    case '🌅':
+      updateUserTwo('🌅')
+      break
+    case '🔥':
+      updateUserTwo('🔥')
       break
     case '☄️':
       updateUserTwo('☄️')
+      break
+    case '🏝':
+      updateUserTwo('🏝')
       break
   }
 }
@@ -124,7 +130,7 @@ const checkWinner = function () {
         sq(0) !== '' && sq(0) === sq(4) && sq(4) === sq(8) ||
         sq(6) !== '' && sq(6) === sq(4) && sq(4) === sq(2)) {
     message(`Congratulations, ${currentUser}! You win!`)
-    $('#main').css({'background-repeat': 'no-repeat','background-size': 'cover', 'background-position': 'center', 'height': '100%'})
+    $('#main').css({'background-repeat': 'no-repeat', 'background-size': 'cover', 'background-position': 'center', 'height': '100%'})
     gameValues.isOver = true
     if (currentUser === userOne) {
       $('#main').css('background-image', 'url(../../public/moon.gif)')
@@ -177,7 +183,7 @@ const startGame = function () {
   executedScore = false
   message('')
   $('#main').css('background-image', 'none')
-  currentUser = userOne
+  currentUser = userTwo
 }
 
 // ************************
