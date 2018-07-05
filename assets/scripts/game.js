@@ -147,6 +147,12 @@ const checkWinner = function () {
     } else if (currentUser === '🦖') {
       $('#main').css('background-image', 'url(https://ashratigan.github.io/tic-tac-toe/public/trex.gif)')
       winner = currentUser
+    } else if (currentUser === '🌋') {
+      $('#main').css('background-image', 'url(https://ashratigan.github.io/tic-tac-toe/public/volcano.gif)')
+      winner = currentUser
+    } else if (currentUser === '🌬') {
+      $('#main').css('background-image', 'url(https://ashratigan.github.io/tic-tac-toe/public/wind.gif)')
+      winner = currentUser
     } else if (currentUser === userOne) {
       $('#main').css('background-image', 'url(https://ashratigan.github.io/tic-tac-toe/public/moon.gif)')
       winner = currentUser
