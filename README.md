@@ -38,11 +38,13 @@ In addition to the requirements for this project, I tried to add some unique fea
 - I included a message to notify which player's turn is next. 
 - I added a button to reset the score. 
 - I added different gifs to be displayed based on which player wins and if there is a tie.
+### Recently added features ###
+- I added a new feature to allow users to choose their playing piece from a dropdown menu of emojis.
 
 ## Wireframes
 ![Tic Tac Toe Wireframe](https://i.imgur.com/WQJGVL7.png)
 
 ## Updates
 I am currently working on a few new features:
-- a feature to allow users to choose their playing piece from a list of emojis
+- a feature to adjust the theme of the game
 - a feature to allow users to play against a computer
